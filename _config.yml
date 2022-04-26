@@ -26,9 +26,31 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://boogiesoftware.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
-theme: minima
+theme: just-the-docs
 plugins:
   - jekyll-feed
+
+# Theme config
+logo: "/assets/images/boogie-logo-rgb.png"
+#heading_anchors: true
+aux_links:
+  "Back to Boogie Software main site":
+    - "https://boogiesoftware.com"
+search_enabled: true
+#color_scheme: dark
+collections:
+  archive:
+    permalink: "/:collection/:path/"
+    output: true
+just_the_docs:
+  collections:
+    pages:
+      name: Useful links
+    archive:
+      name: Archive
+
+
+#footer_content: "This has been an article by Boogie Software Oy"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
