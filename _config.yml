@@ -41,7 +41,7 @@ search_enabled: true
 #color_scheme: dark
 collections:
   archive:
-    permalink: "/:collection/:path/"
+    permalink: "/:path.html"
     output: true
 just_the_docs:
   collections:
