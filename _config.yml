@@ -43,12 +43,15 @@ collections:
   archive:
     permalink: "/:path.html"
     output: true
+  articles:
+    permalink: "/:collection/:path/"
+    output: true
 just_the_docs:
   collections:
-    pages:
-      name: Useful links
+    articles:
     archive:
-      name: Archive
+    pages:
+
 
 
 #footer_content: "This has been an article by Boogie Software Oy"

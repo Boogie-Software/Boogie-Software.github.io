@@ -1,0 +1,36 @@
+---
+layout: default
+---
+<style>
+.article {
+    display: flex;
+}
+    .article > div {
+        flex: 0 1 auto;
+    }
+
+.thumb {
+    min-width: 110px;
+}
+.title {
+}
+</style>
+
+<h1>Recent articles</h1>
+
+    {% for article in site.archive reversed %}
+    <div class="article">
+        <div class="thumb">
+            {% if article.thumbnail %}
+                <img src="{{ article.thumbnail }}" alt="Thumbnail for article {{ article.title }}"/>
+            {% else %}
+                <img src="/assets/images/article_placeholder.png" alt="Thumbnail for article {{ article.title }}"/>
+            {% endif %}
+        </div>
+        <div class="title">
+            <h2>{{ article.title }}</h2>
+            
+
+        </div>
+    </div>
+    {% endfor %}
