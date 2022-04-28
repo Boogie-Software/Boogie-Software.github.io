@@ -2,35 +2,64 @@
 layout: default
 ---
 <style>
-.article {
-    display: flex;
-}
-    .article > div {
-        flex: 0 1 auto;
+    .wrap {
+        white-space: normal !important;
     }
 
-.thumb {
-    min-width: 110px;
-}
-.title {
-}
+    .article-list {
+        display: grid;
+        gap: 4px;
+    }
+
+    .thumb {
+        grid-column: 1;
+        column-width: 100px;
+    }
+    .title {
+        grid-column: 2;
+        max-width: 80%;
+        align-items: start;
+        h2 {
+            align-self: left;
+        }
+    }
+
 </style>
 
 <h1>Recent articles</h1>
+<div class="article-list">
+    {% for article in site.articles reversed %}
+        <div class="thumb">
+            <a href={{ article.url }} class="wrap">
+                {% if article.thumbnail %}
+                    <img src="{{ article.thumbnail }}"/>
+                {% else %}
+                    <img src="/assets/images/article_placeholder.png"/>
+                {% endif %}
+            </a>
+       </div>
+        <div class="title">
+            <a href={{ article.url }} class="wrap">
+                <h2>{{ article.title }}</h2>
+            </a>
+        </div>
+    {% endfor %}
+
 
     {% for article in site.archive reversed %}
     <div class="article">
-        <div class="thumb">
-            {% if article.thumbnail %}
-                <img src="{{ article.thumbnail }}" alt="Thumbnail for article {{ article.title }}"/>
-            {% else %}
-                <img src="/assets/images/article_placeholder.png" alt="Thumbnail for article {{ article.title }}"/>
-            {% endif %}
+            <a href={{ article.url }} class="wrap">
+                {% if article.thumbnail %}
+                    <img src="{{ article.thumbnail }}"/>
+                {% else %}
+                    <img src="/assets/images/article_placeholder.png"/>
+                {% endif %}
+            </a>
         </div>
         <div class="title">
-            <h2>{{ article.title }}</h2>
-            
-
+            <a href={{ article.url }} class="wrap">
+                <h2>{{ article.title }}</h2>
+            </a>
         </div>
-    </div>
     {% endfor %}
+</div>
