@@ -81,13 +81,13 @@ What happens there in short is that Jekyll will compose a static site consisting
 ## But I already have a Blog!
 
 So you want to migrate to Jekyll? No problem. There is support for migration from multiple blogging platforms. You can use [`jekyll-import`](https://import.jekyllrb.com/docs/home/) to import the data to to your Jekyll-blog-project.
-I have been using [Blogger](https://import.jekyllrb.com/docs/blogger/). Basically the xml-dump that I got from Blogger included all the article-markup. What it did not contain was all the pictures. So I just scavenged them using `wget -r http://localhost:4000 -H -D <Here Be Comma Separated List of Blogger Image Domains>` and changed my content to point to local images instead of the Blogger-hosted ones. Sorting the Blogs required bit of tweaking with `nav-order` - attribute of Front Matter. If you -- my dear reader -- can think of an easier solution, please advice me as well.
+I have been using [Blogger](https://import.jekyllrb.com/docs/blogger/). Basically the xml-dump that I got from Blogger included all the article-markup. What it did not contain was all the pictures. So I just scavenged them using `wget -r http://localhost:4000 -H -D <Here Be Comma Separated List of Blogger Image Domains>` and changed my content to point to local images instead of the Blogger-hosted ones. Sorting the Blogs required bit of tweaking with `nav_order` - attribute of Front Matter. If you -- my dear reader -- can think of an easier solution, please advice me as well.
 
 
 ## The final conclusion
 
-So far I have been developing and maintaining multiple different websites each with separate requirement and approaches. To me the CMS solution seems easy at first but fragile. Static sites as such are bit more difficult to set up and writing the content means that you either need some templating solution or you end up writing HTML by hand.
-The headless CMS approach is bit in-between. You have the possibility of writing custom HTML should you need to. Also you can use developer-level tools like plain text editors. If you mess something up you have version control-tools on your side - nothing is lost in Git unless you have a habbit of force-pushing to main.
+So far I have been developing and maintaining multiple different websites each with separate requirement and approaches. To me the CMS solution seems easy at first, but fragile in long run. Static sites as such are bit more difficult to set up and writing the content means, that you either need some templating solution or you end up writing HTML by hand.
+The headless CMS approach is bit in-between. You have the possibility of writing custom HTML should you need to. Also you can use developer-level tools like plain text editors. If you mess something up you have version control-tools on your side - nothing is lost in Git unless you have a habit of force-pushing to main.
 
 All in all - all that is needed now is me trying to convince my colleagues to adopt this toolkit as well.
 
