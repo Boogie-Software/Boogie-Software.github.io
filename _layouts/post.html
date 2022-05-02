@@ -1,0 +1,15 @@
+---
+layout: default
+---
+{% if page.description %}<meta name="description" content="{{ page.description }}">{% endif %}
+
+
+{{ content }}
+<em>
+{% if page.author %}
+    Originally published by {{ page.author }}
+{% endif %}
+{% if page.date %}
+    -- {{ page.date }}
+{% endif %}
+</em>

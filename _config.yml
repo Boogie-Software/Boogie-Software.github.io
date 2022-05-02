@@ -33,7 +33,7 @@ plugins:
 
 # Theme config
 logo: "/assets/images/boogie-editorials.png"
-#heading_anchors: true
+heading_anchors: true
 aux_links:
   "Back to Boogie Software main site":
     - "https://boogiesoftware.com"

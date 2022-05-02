@@ -1,34 +1,10 @@
 ---
 layout: default
 ---
-<style>
-    .wrap {
-        white-space: normal !important;
-    }
 
-    .article-list {
-        display: grid;
-        gap: 4px;
-    }
-
-    .thumb {
-        grid-column: 1;
-        column-width: 100px;
-    }
-    .title {
-        grid-column: 2;
-        max-width: 80%;
-        align-items: start;
-        h2 {
-            align-self: left;
-        }
-    }
-
-</style>
-
-<h1>Recent articles</h1>
 <div class="article-list">
-    {% for article in site.articles reversed %}
+    {%- assign sorted_number_ordered_articles = site.articles | sort:"nav_order" -%}
+    {% for article in sorted_number_ordered_articles %}
         <div class="thumb">
             <a href={{ article.url }} class="wrap">
                 {% if article.thumbnail %}
@@ -45,8 +21,8 @@ layout: default
         </div>
     {% endfor %}
 
-
-    {% for article in site.archive reversed %}
+    {%- assign sorted_number_ordered_archive = site.archive | sort:"nav_order" -%}
+    {% for article in sorted_number_ordered_archive %}
     <div class="article">
             <a href={{ article.url }} class="wrap">
                 {% if article.thumbnail %}
