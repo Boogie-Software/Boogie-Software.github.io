@@ -10,6 +10,6 @@ layout: default
     Written by {{ page.author }}
 {% endif %}
 {% if page.date %}
-    -- {{ page.date }}
+    -- {{ page.date | date: '%Y-%m-%d'}}
 {% endif %}
 </em>

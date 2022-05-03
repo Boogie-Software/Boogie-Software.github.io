@@ -35,7 +35,7 @@ plugins:
 logo: "/assets/images/boogie-editorials.png"
 heading_anchors: true
 aux_links:
-  "Back to Boogie Software main site":
+  "Back to Boogie Software company website":
     - "https://boogiesoftware.com"
 search_enabled: true
 #color_scheme: dark

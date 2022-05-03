@@ -3,7 +3,7 @@ layout: post
 title: Checking out Jekyll headless CMS for blogging
 nav_order: -1 #decrease this by one for every new article
 author: Marko Taponen
-date: 2022-05-02
+date: 2022-05-03
 thumbnail: /assets/images/articles/1/duck-thumb.jpg
 tags:
 - CMS
@@ -29,8 +29,8 @@ Headless CMS is basically a site generator that generates a website from templat
 
 Downside of using this approach is that you need to have some preferrably automated deployment chain and usually the tools are programming related. Also you need to understand how the content generator you have chosen can be used and how you can add features if you need to do so. Also you cannot have rich data manipulation as that would require real backend.
 
-We are a house full of coders. Most of us are proficient with tools like Git, various templating engines and different markup or markdown syntaxes. For our main site we have been running headless CMS for years.
-What little backend-functionality we have needed, we have used serverless technologies like Lambdas.
+We are a house full of coders. Most of us are proficient with tools like Git, various templating engines and different markup or markdown syntaxes. For our [main site](https://boogiesoftware.com) we have been running headless CMS for years.
+What minor backend-functionality we have needed, we have used serverless technologies like Lambdas.
 
 ## What is Jekyll
 
@@ -48,7 +48,7 @@ Easiest way to try things out is to use Jekyll with [GitHub Pages](https://pages
 
 As mentioned above, you can change the theme of your Jekyll- page. Now if things are almost, but not quite perfect, you can tweak things.
 
-Firstly - you can use [remote-themes](https://github.com/benbalter/jekyll-remote-theme). I.e. you can select a theme that is not officially supported by GitHub. If you use some other hosting-platfor you can load the theme as a gem. After that you can customize it even more by including files under `_includes`, `_layouts` and `_sass` directories of your project directory. You may want to check out the contents of the plugin you are using and "overwrite" some of the contents or alternatively use the customization points built in.
+Firstly - you can use [remote-themes](https://github.com/benbalter/jekyll-remote-theme). I.e. you can select a theme that is not officially supported by GitHub. If you use some other hosting-platform you can load the theme as a gem. After that you can customize it even more by including files under `_includes`, `_layouts` and `_sass` directories of your project directory. You may want to check out the contents of the plugin you are using and "overwrite" some of the contents or alternatively use the customization points built in.
 
 So far I have customized:
 - `_includes/head_custom.html` to contain favicon
