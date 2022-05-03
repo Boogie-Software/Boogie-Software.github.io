@@ -23,7 +23,7 @@ email: sales@boogiesoftware.com
 description: >- # this means to ignore newlines until "baseurl:"
   Articles and opinions written by Boogie Software experts
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://articles-staging.app.boogiesoftware.com" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://blog.boogiesoftware.com" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 remote_theme: just-the-docs/just-the-docs
